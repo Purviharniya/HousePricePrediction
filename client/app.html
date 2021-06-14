@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="app.css">
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 align-self-center">
+                <h2 class="text-center pb-5">House Price Prediction</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="">Area (Sq. Ft.)</label>
+                        <input type="number" class="form-control" name='area_sqft' id='area_sqft' value='1000' required>
+                    </div>
+                    <div class="">
+                        <label class='d-block'>BHK</label>
+                        <div class="">
+                            <input type="radio" class="checkbox-tools" name="bhk" id='bhk1' value='1'><label for='bhk1'
+                                class="for-checkbox-tools">1</label>
+                            <input type="radio" class="checkbox-tools" name="bhk" id='bhk2' value='2' checked><label
+                                for='bhk2' class="for-checkbox-tools">2</label>
+                            <input type="radio" class="checkbox-tools" name="bhk" id='bhk3' value='3'><label for='bhk3'
+                                class="for-checkbox-tools">3</label>
+                            <input type="radio" class="checkbox-tools" name="bhk" id='bhk4' value='4'><label for='bhk4'
+                                class="for-checkbox-tools">4</label>
+                            <input type="radio" class="checkbox-tools" name="bhk" id='bhk5' value='5'><label for='bhk5'
+                                class="for-checkbox-tools">5</label>
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label class='d-block'>Bathrooms</label>
+                        <div class="">
+                            <input type="radio" class="checkbox-tools" id='bath1' name="bath" value='1'><label
+                                for='bath1' class="for-checkbox-tools">1</label>
+                            <input type="radio" class="checkbox-tools" id='bath2' name="bath" value='2' checked><label
+                                for='bath2' class="for-checkbox-tools">2</label>
+                            <input type="radio" class="checkbox-tools" id='bath3' name="bath" value='3'><label
+                                for='bath3' class="for-checkbox-tools">3</label>
+                            <input type="radio" class="checkbox-tools" id='bath4' name="bath" value='4'><label
+                                for='bath4' class="for-checkbox-tools">4</label>
+                            <input type="radio" class="checkbox-tools" id='bath5' name="bath" value='5'><label
+                                for='bath5' class="for-checkbox-tools">5</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Location</label>
+                        <select class="form-control" id="SLocations">
+                            <option value="" disabled selected>Choose a location</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="button" class="btn btn-success" value='PREDICT' onclick="EstimatePrice()">
+                        <input type="reset" class="btn btn-primary" value='RESET'>
+                    </div>
+                    <div class="form-group">
+                        <div class="result" id='EstimatedPrice'>
+                            <h2></h2>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <img src='img.jpg' class="img-fluid imimg">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
